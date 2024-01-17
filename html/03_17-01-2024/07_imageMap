@@ -1,0 +1,7 @@
+image map means apply link on image some available shape.
+
+shapes are : circle, rect, polygon 
+
+tags are used : <map> and <area>
+
+points => paint editor
