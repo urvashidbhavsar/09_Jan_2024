@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            padding: 4px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        /* nth-child effected when your element or class are same */
+        tr:nth-child(odd) {
+            background-color: blue;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: darkcyan;
+        }
+
+        td:first-child {
+            font-size: 20px;
+            background-color: blueviolet;
+        }
+
+        td:last-child {
+            font-size: 20px;
+            background-color: brown;
+        }
+
+        input {
+            border: 1px solid gray;
+        }
+
+        input:focus-visible {
+            outline: none;
+        }
+
+        input:focus {
+            border: 1px solid rgb(77, 76, 76);
+        }
+    </style>
+</head>
+
+<body>
+    <table class="" border="1">
+        <tr>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+        </tr>
+        <tr>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+        </tr>
+        <tr>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+        </tr>
+        <tr>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+        </tr>
+        <tr>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+        </tr>
+        <tr>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+        </tr>
+    </table>
+    <br><br>
+    <input type="text" name="" id="" placeholder="enter value">
+</body>
+
+</html>
