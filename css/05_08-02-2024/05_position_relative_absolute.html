@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* relative means parent
+           absolute means child  */
+        .main {
+            border: 1px solid black;
+            position: relative;
+        }
+
+        .div {
+            height: 100px;
+            width: 100px;
+        }
+
+        .div1 {
+            background-color: blueviolet;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .div2 {
+            background-color: coral;
+            position: absolute;
+            top: 50px;
+            left: 50px
+        }
+
+        .div3 {
+            background-color: cadetblue;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="div1 div"></div>
+        <div class="div2 div"></div>
+        <div class="div3 div"></div>
+    </div>
+</body>
+
+</html>

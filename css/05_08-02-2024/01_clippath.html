@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 600px;
+            /* 50% = circle increse/decrease 
+                30% = move left-right
+                20% = move top-bottom */
+            /* clip-path: circle(50% at 30% 20%); */
+
+            /* 40% = x radius increse/decrease 
+                20% = y radius increse/decrease
+            10% = move left-right
+            50% = move top-bottom
+            */
+            /* clip-path: ellipse(40% 20% at 10% 50%); */
+
+            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="">
+</body>
+
+</html>
