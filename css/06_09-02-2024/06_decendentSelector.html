@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div {
+            height: auto;
+            width: 250px;
+            border: 1px solid black;
+            padding: 12px;
+            margin: 10px;
+            /* float: left; */
+        }
+
+        .mydiv p {
+            color: red;
+        }
+
+        .mydiv1 p {
+            color: green;
+        }
+
+        .mydiv1 p span {
+            color: blue;
+            font-size: 30px;
+        }
+
+        /* a:nth-child(1) {
+            color: red;
+        }
+
+        a:nth-child(2) {
+            color: green;
+        } */
+        a {
+            text-decoration: none;
+            color: red;
+        }
+
+        a.active {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- parent child -->
+    <div class="mydiv div">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque neque repellendus doloribus libero, eaque
+            deserunt placeat omnis animi quod autem vitae quasi consequuntur nesciunt accusamus id. Dolorum illum
+            architecto eaque.
+        </p>
+    </div>
+    <div class="mydiv1 div">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi illo saepe provident quisquam? Est natus
+            harum magnam in laboriosam quia asperiores! Dolores in enim hic? Accusamus optio nobis odio quo?
+            <span>hello</span>
+        </p>
+    </div>
+    <br><br>
+    <div>
+        <a href="" class="active">click here</a>
+        <a href="">click here</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+display means how to your element/content display on the page.
+
+display : inline 
+display : inline-block 
+display : block (default)
+display : flex 
+display : inline-flex 
+display : grid 
+display : inline-grid 
+display : table
+display : inline-table 
+display : none

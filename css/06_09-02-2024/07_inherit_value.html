@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            height: auto;
+            width: 240px;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 10px;
+            background-color: cadetblue;
+        }
+
+        .mydiv>.subdiv {
+            height: inherit;
+            width: inherit;
+            border: inherit;
+            padding: inherit;
+            margin: inherit;
+            background-color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mydiv">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nemo quidem cum, quibusdam distinctio recusandae
+        laudantium repellat nihil saepe! Aut placeat iste necessitatibus eius vel sed repellendus atque ullam tempora?
+        <div class="subdiv">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis ullam nemo nam doloremque molestiae
+            aspernatur quam. Qui est laudantium dignissimos tempore ipsum at quidem repellendus, similique tempora ullam
+            deleniti fugit!
+        </div>
+    </div>
+</body>
+
+</html>
