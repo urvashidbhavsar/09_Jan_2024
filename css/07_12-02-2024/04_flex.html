@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            display: flex;
+        }
+
+        .div {
+            height: 100px;
+            width: 100px;
+        }
+
+        .div1 {
+            background-color: aqua;
+            flex-grow: 1;
+            /* try to adjust overflow value in parent area */
+            flex-shrink: 0;
+            /* add base value in grow */
+            flex-basis: 10%;
+        }
+
+        .div2 {
+            background-color: magenta;
+            flex: 2 1 0%;
+        }
+
+        .div3 {
+            background-color: cadetblue;
+            flex: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="div1 div"></div>
+        <div class="div2 div"></div>
+        <div class="div3 div"></div>
+    </div>
+</body>
+
+</html>

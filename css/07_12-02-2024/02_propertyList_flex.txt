@@ -1,0 +1,18 @@
+list of property which is only effected when we apply display flex.
+
+(1) gap (row-gap, column-gap)
+(2) justify-content 
+(3) align-items 
+(4) flex-direction 
+(5) flex-wrap 
+(6) flex-flow 
+(7) flex (child element)
+(8) flex-basis (child element )
+(9) flex-grow (child element)
+(10) flex-shrink  (child element)
+(11) align-content 
+(12) place-content 
+(13) order 
+
+justify ( horizontally )
+align (vertically)
