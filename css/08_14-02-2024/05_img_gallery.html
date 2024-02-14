@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+
+        .img1 {
+            grid-row: 1 / span 2;
+        }
+
+        .img3 {
+            grid-column: 3;
+            grid-row: 1 / span 2;
+        }
+
+        .img3 img {
+            height: 100%;
+        }
+
+        .img7 {
+            grid-row: 3;
+            grid-column: 1 / span 2;
+        }
+
+        .img8 {
+            grid-row: 3;
+            grid-column: 3 / span 2;
+        }
+
+        .image {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="img1 img">
+            <img src="https://i.pinimg.com/736x/dd/97/3a/dd973ac116a977c8dd5296b0da504b8c.jpg" alt="">
+        </div>
+        <div class="img2 img">
+            <img src="https://images.ctfassets.net/hrltx12pl8hq/3Z1N8LpxtXNQhBD5EnIg8X/975e2497dc598bb64fde390592ae1133/spring-images-min.jpg"
+                alt="" class="image">
+        </div>
+        <div class="img3 img">
+            <img src="https://pixlr.com/images/index/ai-image-generator-one.webp" alt="">
+        </div>
+        <div class="img4 img">
+            <img src="https://www.shutterstock.com/image-photo/womans-hand-fern-leaf-man-260nw-2190358695.jpg" alt=""
+                class="image">
+        </div>
+        <div class="img5 img">
+            <img src="https://media.istockphoto.com/id/1424699305/photo/atal-bridge-at-the-sabarmati-riverfront-in-ahmedabad.jpg?s=612x612&w=0&k=20&c=-wnbWk9dynJ67_Cog0ZdLGjkJ-xqtrGUWt1G4r4HyMY="
+                alt="" class="image">
+        </div>
+        <div class="img6 img">
+            <img src="https://www.gettyimages.com/gi-resources/images/500px/983794168.jpg" alt="" class="image">
+        </div>
+        <div class="img7 img">
+            <img src="https://media.istockphoto.com/id/1322194536/photo/sabarmati-riverfront-aerial-view-ahmedabad.jpg?s=612x612&w=0&k=20&c=G8qSUp_FeJzB4Tq1vd02NGGSvUC-pI_PSb_z7ELdXAI="
+                alt="" class="image">
+        </div>
+        <div class="img8 img">
+            <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_640.jpg" alt="" class="image">
+        </div>
+
+    </div>
+</body>
+
+</html>

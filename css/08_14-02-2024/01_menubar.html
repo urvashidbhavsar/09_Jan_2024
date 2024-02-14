@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .MenubarSec {
+            background-color: #1559ed;
+        }
+
+        .MenubarSec .menubar-space {
+            /* margin-left: 80px; */
+            /* margin-right: 80px; */
+            margin: 0 80px;
+        }
+
+        .MenubarSec .menu-pag {
+            padding: 20px 0;
+        }
+
+        .MenubarSec .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .MenubarSec .navbar .logo {
+            flex: 1;
+        }
+
+        .MenubarSec .navbar img {
+            width: 80px;
+        }
+
+        .MenubarSec .navbar .nav {
+            flex: 7;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 20px;
+            align-items: center;
+        }
+
+        .MenubarSec .navbar .nav ul {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .MenubarSec .navbar .nav ul li {
+            padding: 15px;
+        }
+
+        .MenubarSec .navbar .nav ul a {
+            color: white;
+        }
+
+        .MenubarSec .navbar .search {
+            display: flex;
+        }
+
+        .MenubarSec .navbar .icons {
+            flex: 1;
+            display: flex;
+            gap: 20px;
+            color: white;
+            text-align: center;
+            align-items: center;
+        }
+
+        .MenubarSec .navbar .icons i {
+            font-size: 20px;
+        }
+
+        .MenubarSec .navbar .search .sicon {
+            height: 30px;
+            width: 30px;
+            border: 1px solid gray;
+            background-color: white;
+            border-right: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .MenubarSec .navbar .search input[type="text"] {
+            height: 30px;
+            width: 200px;
+            border: 1px solid gray;
+            border-left: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="MenubarSec">
+        <div class="menubar-space menu-pag">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="myntra.png" alt="">
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="">Men</a></li>
+                        <li><a href="">Women</a></li>
+                        <li><a href="">Kids</a></li>
+                        <li><a href="">Home & Living</a></li>
+                        <li><a href="">Beauty</a></li>
+                        <li><a href="">Studio</a></li>
+                    </ul>
+                    <form action="">
+                        <div class="search">
+                            <div class="sicon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div>
+                                <input type="text" name="" id="" placeholder="Search Here">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="icons">
+                    <div class="">
+                        <div><i class="fa-regular fa-user"></i></div>
+                        <div>Profile</div>
+                    </div>
+                    <div class="">
+                        <div><i class="fa-regular fa-heart"></i></div>
+                        <div>Wishlist</div>
+                    </div>
+                    <div class="">
+                        <div><i class="fa-solid fa-bag-shopping"></i></div>
+                        <div>Bag</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
