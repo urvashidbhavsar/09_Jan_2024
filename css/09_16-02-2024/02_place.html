@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .mydiv {
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            display: grid;
+            /* display: grid / flex; */
+            /* flex-wrap: wrap; */
+            /* justify-content: center; */
+            /* align-content: center; */
+            /* short hand of justify-content and align-content but align-content effected when we set flex-wrap */
+
+            /* this property perfect effected when we set display grid rather than flex */
+            /* place-content: center; */
+
+            /* short hand of align-items and justify-items
+            when we use flex it effected only align-items 
+            when we use grid it effected perfectly
+            */
+            /* place-items: center; */
+        }
+
+        i {
+            font-size: 40px;
+            /* short hand of align-self and justify-self 
+            when we set flex it effected only align-self 
+                when we set grid it effected perfectly */
+            place-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mydiv">
+        <i class="fa-solid fa-house"></i>
+    </div>
+</body>
+
+</html>

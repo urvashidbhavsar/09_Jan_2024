@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main div {
+            height: 100px;
+            /* width: 100px; */
+            background-color: rgb(177, 152, 201);
+        }
+
+        .main {
+            display: grid;
+            gap: 10px;
+            grid-template-areas: 'myarea myarea myarea myarea newarea';
+        }
+
+        .div1 {
+            grid-area: myarea;
+            width: 100%;
+        }
+
+        .div2 {
+            grid-area: newarea;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+        <div class="div5">5</div>
+    </div>
+</body>
+
+</html>
