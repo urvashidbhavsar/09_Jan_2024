@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cube {
+            height: 200px;
+            width: 200px;
+            margin: 140px auto;
+            perspective: 400px;
+            perspective-origin: 100px 300px;
+        }
+
+        .cubesize {
+            transform: translateZ(-100px);
+            height: 200px;
+            width: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            /* transform: translateZ(-75px) scaleZ(1.2) rotateZ(337deg); */
+        }
+
+        .div {
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            font-size: 60px;
+            display: grid;
+            place-content: center;
+        }
+
+        .front {
+            background-color: rgba(137, 43, 226, 0.6);
+            transform: rotateX(0deg) translateZ(100px);
+        }
+
+        .back {
+            background-color: rgba(255, 0, 0, 0.6);
+            transform: rotateX(0deg) translateZ(-100px);
+        }
+
+        .left {
+            background-color: rgba(0, 0, 255, 0.6);
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .right {
+            background-color: rgba(255, 127, 80, 0.6);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .top {
+            background-color: rgba(139, 0, 139, 0.6);
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .bottom {
+            background-color: rgba(25, 25, 112, 0.6);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cube">
+        <div class="cubesize">
+            <div class="div front">1</div>
+            <div class="div back">2</div>
+            <div class="div left">3</div>
+            <div class="div right">4</div>
+            <div class="div top">5</div>
+            <div class="div bottom">6</div>
+        </div>
+    </div>
+</body>
+
+</html>
