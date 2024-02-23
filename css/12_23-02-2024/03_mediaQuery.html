@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            max-width:576px             mobile device 
+            min-width:576px                 -
+            min-width:768px                 tablet 
+            min-width:992px                 mini leptops/screen 
+            min-width:1200px = 1140px       large screen device 
+            min-width:1400px                extra large screen device
+        */
+        /* apply media query */
+        @media (max-width:576px) {
+            p {
+                background-color: cadetblue;
+            }
+        }
+
+        @media (min-width:576px) {
+            p {
+                background-color: chocolate;
+            }
+        }
+
+        @media (min-width:768px) {
+            p {
+                background-color: yellowgreen;
+            }
+        }
+
+        @media (min-width:992px) {
+            p {
+                background-color: cornflowerblue;
+            }
+        }
+
+        @media (min-width:1200px) {
+            p {
+                background-color: blueviolet;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ad nobis ut rerum incidunt, sequi tenetur alias
+        accusantium aliquid modi voluptas quae commodi dolores enim repudiandae dolorum ex explicabo labore.
+    </p>
+</body>
+
+</html>
