@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* start with -- give any name */
+            --bg-yellowgreen: yellowgreen;
+            --txt-blue: blue;
+            --height-auto: auto;
+            --width-300: 100%;
+        }
+
+        .mydiv {
+            background-color: var(--bg-yellowgreen);
+            color: var(--txt-blue);
+            height: var(--height-auto);
+            width: var(--width-300);
+            border: 1px solid black;
+            padding: 30px;
+            font-size: calc(2vw + 1rem);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mydiv">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam necessitatibus, quidem modi fugit numquam
+        odio adipisci excepturi eveniet ducimus totam voluptate quibusdam aliquam animi similique voluptatum nobis?
+        Deleniti, facilis?
+    </div>
+</body>
+
+</html>
