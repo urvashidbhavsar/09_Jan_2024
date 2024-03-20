@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .line {
+            border-bottom: 1px solid red;
+            width: fit-content;
+            padding: 3px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // let num1= 23;
+        // let num2 = 21;
+
+        let num1 = 23, num2 = 21;
+
+        // string representation before ES6
+        // document.write("Addition is : ", num1 + num2)
+        // document.write("<div>Addition is : " + (num1 + num2) + "</div>")
+
+        // after ES6
+        document.write(`<div class="line">Addition is => ${num1 + num2} </div>`);
+        document.write(`<div class="line">Subtract is => ${num1 - num2} </div>`);
+        document.write(`<div class="line">Multiply is => ${num1 * num2} </div>`);
+        document.write(`<div class="line">Division is => ${num1 / num2} </div>`);
+        document.write(`<div class="line">Module is => ${num1 % num2} </div>`);
+
+    </script>
+</body>
+
+</html>
