@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="openlink()">open link</button>
+    <button onclick="closelink()">close link</button>
+
+    <script>
+        var link = "https://www.ascii-code.com/characters/ascii-alphabet-characters"
+        var clink;
+        function openlink() {
+            clink = window.open(link)
+        }
+        function closelink() {
+            clink.window.close()
+        }
+    </script>
+</body>
+
+</html>

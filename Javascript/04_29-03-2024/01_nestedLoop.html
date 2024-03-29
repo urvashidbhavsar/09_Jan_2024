@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // print pattern
+        // *
+        // * * 
+        // * * * 
+        // * * * * 
+        // * * * * *
+
+        var noOfptn = 5;
+        // row
+        for (let row = 0; row < noOfptn; row++) {
+            // column
+            for (let col = 0; col <= row; col++) {
+                document.write("* ")
+                // document.write(row)
+                // document.write(col)
+                // document.write("&#65;")
+            }
+            document.write("<br>")
+        }
+        noOfptn = 5;
+        // row
+        for (let row = noOfptn; row >= 0; row--) {
+            // column
+            for (let col = 0; col <= row; col++) {
+                document.write("* ")
+            }
+            document.write("<br>")
+        }
+    </script>
+</body>
+
+</html>
