@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* create a class which is not exist in a structure */
+        .title {
+            font-size: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 5px;
+            background-color: blue;
+            color: white;
+        }
+
+        .title1 {
+            font-size: 35px;
+            font-family: cursive;
+            padding: 5px;
+            background-color: crimson;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="addcss()">Add</button>
+    <button onclick="removecss()">Remove</button>
+    <button onclick="toggleCss()">Toggle</button>
+    <button onclick="checkclass()">Contains</button>
+
+    <h1 id="head">Hello User</h1>
+    <h1 id="head1">Hello User</h1>
+
+    <script>
+        function addcss() {
+            let h1 = document.getElementById("head")
+            h1.classList.add("title")
+        }
+        function removecss() {
+            let h1 = document.getElementById("head");
+            h1.classList.remove("title")
+        }
+        function toggleCss() {
+            let h2 = document.getElementById("head1");
+            h2.classList.toggle("title1")
+        }
+        function checkclass() {
+            let h2 = document.getElementById("head1");
+            if (h2.classList.contains("title1") == true) {
+                alert("class exist")
+            } else {
+                alert("not exist")
+            }
+        }
+    </script>
+</body>
+
+</html>

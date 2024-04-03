@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">click here</button>
+
+    <button id="btn1">sum</button>
+    <button id="btn2">sum1</button>
+
+    <script>
+        var b = document.getElementById("btn");
+        b.addEventListener("click", function () {
+            alert("task completed")
+        })
+
+        function total() {
+            var a = 5, b = 5;
+            alert("total are " + (a + b));
+        }
+        document.getElementById("btn1").addEventListener("click", total);
+        document.getElementById("btn2").addEventListener("click", total);
+    </script>
+</body>
+
+</html>

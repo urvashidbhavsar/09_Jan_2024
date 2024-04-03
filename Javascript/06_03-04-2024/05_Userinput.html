@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" onchange="dispName()">
+        <label for="">Enter your name : </label>
+        <input type="text" name="" id="user" placeholder="name...">
+        <!-- onkeyup="dispName()" -->
+
+        <br><br>
+        <!-- <button onclick="dispName()">display</button> -->
+    </form>
+    <p>your name is : <span id="res"></span></p>
+
+    <script>
+        function dispName() {
+            let input = document.getElementById("user");
+            let res = document.getElementById("res");
+            res.innerHTML = input.value;
+            input.value = ""
+        }
+    </script>
+</body>
+
+</html>

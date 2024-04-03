@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv,
+        .inner {
+            border: 1px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mydiv" onmousewheel="eventex()">
+        Outer Div
+        <div class="inner">
+            Inner Div
+        </div>
+    </div>
+
+    <div>
+        <input type="text" name="" id="" onkeyup="eventex()">
+    </div>
+    <!-- 
+        onmousedown => when press mouse pointer
+        onmouseenter => when mouse enter on element
+        onmouseleave => when mouse pointer leave an element
+        onmousemove => when mouse move on element
+        onmouseout => when mouse pointer leave / out from parent as well as child element.
+        onmouseover => when mouse pointer move on parent as well as child element.
+        onmouseup => when mouse button pressed and released.
+        onmousewheel => when mouse wheel is scroll.
+
+        onkeydown => when we press any key on keyboard.
+        onkeypress => when we press alphabets / numbers on keyboard.
+        onkeyup =>
+
+     -->
+    <script>
+        function eventex() {
+            alert("event is fired");
+        }
+    </script>
+</body>
+
+</html>
