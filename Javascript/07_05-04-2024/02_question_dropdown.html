@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .quesForm {
+            display: grid;
+            gap: 10px;
+        }
+
+        select {
+            width: 200px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="quesForm">
+        <div>
+            <label for="">Add Any Question </label>
+            <input type="text" name="" id="question">
+        </div>
+        <div>
+            <button onclick="addQues()">Add</button>
+        </div>
+        <div>
+            <label for="">Questions : </label>
+            <select name="" id="myques">
+                <option value="">---select---</option>
+            </select>
+        </div>
+    </div>
+
+    <script>
+        function addQues() {
+            // input type
+            let inp = document.getElementById("question").value;
+            // create element option
+            let option = document.createElement("option");
+            // add input text in option
+            let inp_text = document.createTextNode(inp)
+            option.append(inp_text);
+            document.getElementById("myques").appendChild(option);
+            document.getElementById("question").value = ""
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="addvalues()">Add value</button>
+    <ul>
+        <li>mylist</li>
+    </ul>
+
+    <script>
+        function addvalues() {
+            var list = document.createElement("li")
+            var listtext = document.createTextNode("my new datalist");
+            list.append(listtext);
+            document.querySelector("ul").appendChild(list)
+        }
+    </script>
+</body>
+
+</html>
