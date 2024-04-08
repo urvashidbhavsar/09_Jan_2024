@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            background-color: chocolate;
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        li {
+            padding: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul></ul>
+
+    <script>
+        var list = ["Home", "About", "Contact"];
+        var ul = document.querySelector("ul");
+        for (let i = 0; i < list.length; i++) {
+            console.log(list[i]);
+            ul.innerHTML += `<li><a href=''>${list[i]}</a></li>`
+        }
+    </script>
+</body>
+
+</html>
