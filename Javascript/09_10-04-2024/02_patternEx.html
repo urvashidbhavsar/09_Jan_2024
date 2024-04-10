@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var str = "Hello World";
+        var str = 1234
+        // expression written in between // 
+        // in breakets we written check expression value
+        // ^ sign out of breakets i.e value check from begins.
+        // ^ sign in the breakets i.e check opposite value.
+        // * check all middle value.
+        // $ check values at the end.
+        // for pattern/expression saparation use dot(.) sign
+
+        // var pattern = /^[a-z.\s]*$/i
+        var pattern = /^[^0-9]*$/
+        if (pattern.test(str)) {
+            console.log("match");
+        } else {
+            console.log("not match");
+        }
+    </script>
+</body>
+
+</html>

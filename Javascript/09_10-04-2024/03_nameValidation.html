@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .userform {
+            width: 550px;
+            border: 2px solid black;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 0.5fr 2fr 1fr;
+            padding: 10px;
+            gap: 20px;
+            align-items: center;
+        }
+
+        input {
+            height: 20px;
+            width: 90%;
+            border: 1px solid gray;
+            padding: 3px 10px;
+        }
+
+        input:focus-visible {
+            outline: none;
+        }
+
+        span {
+            color: red;
+        }
+
+        .error {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="userform">
+        <form action="#">
+            <div class="row">
+                <div><label for="">Name</label></div>
+                <div>
+                    <input type="text" name="" id="username" onblur="return userCheck()"
+                        onkeyup="return checkNamePattern()" maxlength="50">
+                </div>
+                <div>
+                    <span id="msg"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <button onclick="return userCheck()">Check</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function userCheck() {
+            var user = document.getElementById("username");
+            if (user.value == "") {
+                document.getElementById("msg").innerHTML = "Enter name";
+                user.classList.add("error");
+                user.focus()
+            }
+            return false
+        }
+        function checkNamePattern() {
+            var user = document.getElementById("username");
+            var pattern = /^[a-zA-Z.\s]*$/;
+            if (!(pattern.test(user.value))) {
+                document.getElementById("msg").innerHTML = "Invalid Value!!!"
+                user.classList.add("error")
+            } else if (user.value.length < 6) {
+                document.getElementById("msg").innerHTML = "Name should be  minimum 6 character";
+                user.classList.add("error");
+            } else {
+                document.getElementById("msg").innerHTML = "";
+                user.classList.remove("error");
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>
