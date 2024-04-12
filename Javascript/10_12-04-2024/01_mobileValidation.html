@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .userform {
+            width: 550px;
+            border: 2px solid black;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 0.5fr 2fr 1fr;
+            padding: 10px;
+            gap: 20px;
+            align-items: center;
+        }
+
+        input {
+            height: 20px;
+            width: 90%;
+            border: 1px solid gray;
+            padding: 3px 10px;
+        }
+
+        input:focus-visible {
+            outline: none;
+        }
+
+        span {
+            color: red;
+        }
+
+        .error {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="userform">
+        <form action="#">
+            <div class="row">
+                <div><label for="">Mobile No</label></div>
+                <div>
+                    <input type="text" name="" id="mobileno" maxlength="10" onblur="return userCheck()"
+                        onkeyup="return numberCheck()">
+                </div>
+                <div>
+                    <span id="msg"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <button onclick="return userCheck()">Check</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function userCheck() {
+            var no = document.getElementById("mobileno");
+            if (no.value == "") {
+                document.getElementById("msg").innerHTML = "Enter Number";
+                no.classList.add("error");
+                no.focus()
+            }
+            return false
+        }
+        function numberCheck() {
+            var no = document.getElementById("mobileno");
+            var pattern = /^[0-9]*$/;
+            var start = /^[6-9]/
+            if (!(pattern.test(no.value))) {
+                document.getElementById("msg").innerHTML = "Invalid Number!!!";
+                no.classList.add("error")
+            } else if (!(start.test(no.value))) {
+                document.getElementById("msg").innerHTML = "Number should be start in between 6-9";
+                no.classList.add("error")
+            } else if (no.value.length < 10) {
+                document.getElementById("msg").innerHTML = "Enter 10 digits";
+                no.classList.add("error")
+            } else {
+                document.getElementById("msg").innerHTML = ""
+                no.classList.remove("error")
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>

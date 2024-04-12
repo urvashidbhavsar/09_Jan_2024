@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .userform {
+            width: 550px;
+            border: 2px solid black;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 0.5fr 2fr 1fr;
+            padding: 10px;
+            gap: 20px;
+            align-items: center;
+        }
+
+        input {
+            border: 1px solid gray;
+            padding: 3px 10px;
+        }
+
+        input:focus-visible {
+            outline: none;
+        }
+
+        span {
+            color: red;
+        }
+
+        .error {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="userform">
+        <form action="#">
+            <div class="row">
+                <div><label for="">Gender :</label></div>
+                <div>
+                    <input type="radio" name="gen" id="g1" onblur="return validate()">
+                    <label for="">Male</label>
+                    <input type="radio" name="gen" id="g2">
+                    <label for="">Female</label>
+                </div>
+                <div>
+                    <span id="msg1"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div><label for="">Subject :</label></div>
+                <div>
+                    <input type="checkbox" name="chk1" id="c1" onblur="return validate()">
+                    <label for="">java</label>
+                    <input type="checkbox" name="chk2" id="c2">
+                    <label for="">JavaScript</label>
+                    <input type="checkbox" name="chk3" id="c3">
+                    <label for="">Css</label>
+                </div>
+                <div>
+                    <span id="msg2"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div>City : </div>
+                <div>
+                    <select name="" id="citylist" onblur="return validate()">
+                        <option value="-1">--select--</option>
+                        <option value="">Surat</option>
+                    </select>
+                </div>
+                <div>
+                    <span id="msg3"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <button onclick="return validate()">Check</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validate() {
+            var male = document.getElementById("g1")
+            var female = document.getElementById("g2")
+            if (g1.checked == false && g2.checked == false) {
+                document.getElementById("msg1").innerHTML = "Select Value";
+            } else {
+                document.getElementById("msg1").innerHTML = "";
+            }
+
+            var c1 = document.getElementById("c1").checked;
+            var c2 = document.getElementById("c2").checked;
+            var c3 = document.getElementById("c3").checked;
+            if (c1 == false && c2 == false && c3 == false) {
+                document.getElementById("msg2").innerHTML = "Select Value";
+            } else {
+                document.getElementById("msg2").innerHTML = "";
+            }
+
+            var city = document.getElementById("citylist")
+            if (city.value == "-1") {
+                document.getElementById("msg3").innerHTML = "Select City";
+            } else {
+                document.getElementById("msg3").innerHTML = "";
+            }
+            return false
+        }
+    </script>
+
+</body>
+
+</html>

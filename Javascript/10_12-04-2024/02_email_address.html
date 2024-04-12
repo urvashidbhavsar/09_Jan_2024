@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .userform {
+            width: 550px;
+            border: 2px solid black;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 0.5fr 2fr 1fr;
+            padding: 10px;
+            gap: 20px;
+            align-items: center;
+        }
+
+        input {
+            height: 20px;
+            width: 90%;
+            border: 1px solid gray;
+            padding: 3px 10px;
+        }
+
+        input:focus-visible {
+            outline: none;
+        }
+
+        span {
+            color: red;
+        }
+
+        .error {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="userform">
+        <form action="#">
+            <div class="row">
+                <div><label for="">Email :</label></div>
+                <div>
+                    <input type="text" name="" id="email" onblur="" onkeyup="return emailCheck()">
+                </div>
+                <div>
+                    <span id="msg"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <button onclick="">Check</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function emailCheck() {
+            // var emailptn = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{3})+$/;
+            var emailptn = /[A-Za-z0-9\._%$+\-]+@[A-Za-z\.\-]+\.[A-Za-z]{3}/
+            var mail = document.getElementById("email");
+            if (emailptn.test(mail.value)) {
+                document.getElementById("msg").innerHTML = ""
+            } else {
+                document.getElementById("msg").innerHTML = "Invalid Email Address!!!"
+            }
+        }
+    </script>
+</body>
+
+</html>
