@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = "Hello World user" // length = 11 index 0 to 10
+        console.log(str.charAt(2));
+        console.log(str.charCodeAt(0));
+        console.log(str.concat("!!!!"));
+        console.log(str.indexOf('l'))
+        console.log(str.lastIndexOf("l"));
+        console.log(str.search("World"));
+        console.log(str.match("Hello"));
+        console.log(str.match("World"));
+        console.log(str.replace("World", "User"));
+        // 2 is start 7 is length
+        console.log(str.substr(2, 7));
+        // 2 and 7 both index number
+        console.log(str.substring(2, 7));
+        console.log(str.slice(2, 7))
+
+        console.log(str.toUpperCase());
+        console.log(str.toLocaleUpperCase());
+        console.log(str.toLowerCase());
+        console.log(str.toLocaleLowerCase());
+
+        console.log(str.toString());
+        console.log(str.valueOf());
+        console.log(str.split(" "));
+        str = "             user                "
+        console.log(str);
+        console.log(str.trim());
+    </script>
+</body>
+
+</html>
