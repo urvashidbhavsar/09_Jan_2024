@@ -1,0 +1,64 @@
+* {
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.list {
+    background-color: #4169e1;
+    padding         : 10px 30px;
+}
+
+.list .nav {
+    display        : flex;
+    justify-content: end;
+    gap            : 30px;
+}
+
+.list ul li {
+    padding: 10px;
+}
+
+.list ul li a {
+    color    : white;
+    font-size: 20px;
+}
+
+.list .dropdown {
+    position: relative;
+}
+
+.list .dropdown .menu {
+    display         : none;
+    position        : absolute;
+    background-color: white;
+    padding         : 10px;
+    border-radius   : 5px;
+    box-shadow      : 0px 0px 5px rgb(199, 199, 199);
+}
+
+.list .dropdown .Showmenu {
+    display: block;
+}
+
+.list .dropdown .menu li {
+    padding: 5px;
+}
+
+.list .dropdown .menu a {
+    color: black;
+}
+
+.material-symbols-outlined {
+    font-size: unset !important;
+    color    : white;
+}

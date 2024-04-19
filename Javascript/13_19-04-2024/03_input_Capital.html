@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media print {
+            #userinp {
+                display: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    Enter FirstName : <input type="text" name="" id="userinp"> <br><br>
+    Enter Lastname : <input type="text" name="" id="">
+    <button onclick="printpage()">Print</button>
+
+    <script>
+        var inputs = document.querySelectorAll("input")
+        inputs.forEach(inp => {
+            inp.addEventListener("input", () => {
+                inp.value = inp.value.toUpperCase()
+            })
+        });
+        function printpage() {
+            print()
+        }
+    </script>
+</body>
+
+</html>

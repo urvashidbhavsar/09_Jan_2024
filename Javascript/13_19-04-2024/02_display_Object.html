@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <tbody class="title">
+            <tr>
+                <td>Id</td>
+                <td>Firstname</td>
+                <td>Lastname</td>
+            </tr>
+        </tbody>
+        <tbody class="data"></tbody>
+    </table>
+    <script>
+        var userData = {
+            id: "1",
+            firstname: "Urvashi",
+            Lastname: "Bhavsar"
+        }
+        var disp = document.querySelector(".data");
+        disp.innerHTML = `
+            <tr>
+                <td>${userData.id}</td>
+                <td>${userData.firstname}</td>
+                <td>${userData.Lastname}</td>
+            </tr>
+        `
+    </script>
+</body>
+
+</html>

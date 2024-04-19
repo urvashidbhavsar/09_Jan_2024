@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            height: auto;
+            width: 200px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .row {
+            padding: 5px 0;
+        }
+
+        input {
+            border: 1px solid gray;
+        }
+
+        .error {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mydiv">
+        <div class="row">
+            <input type="text" placeholder="Enter 1st value" id="num1">
+        </div>
+        <div class="row">
+            <input type="text" placeholder="Enter 2nd value" id="num2">
+        </div>
+        <div class="row">
+            <button onclick="return MathsOp('num1', 'num2', 'msg')">Addition</button>
+        </div>
+        <div class="row">
+            <p>Addition is : <span id="msg"></span></p>
+        </div>
+    </div>
+
+    <script>
+        function MathsOp(n1, n2, msg) {
+            let number1 = document.getElementById(n1);
+            let number2 = document.getElementById(n2);
+            var res = Number(number1.value) + Number(number2.value)
+            if (number1.value == "" || number2.value == "") {
+                alert("Enter value")
+                number1.classList.add("error")
+                number2.classList.add("error")
+            } else {
+                console.log(res);
+                document.getElementById(msg).innerText = res
+                number1.classList.remove("error")
+                number2.classList.remove("error")
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>

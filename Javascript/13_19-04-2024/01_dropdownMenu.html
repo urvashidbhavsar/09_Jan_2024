@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="drop.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <div class="list">
+        <ul class="nav">
+            <li><a href="">Home</a></li>
+            <li class="dropdown">
+                <a href="#" onclick="dropdown()">Account</a>
+                <span class="material-symbols-outlined">
+                    arrow_drop_down
+                </span>
+                <ul class="menu">
+                    <li><a href="">Register</a></li>
+                    <li><a href="">Login</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" onclick="dropdown()">Blog</a>
+                <span class="material-symbols-outlined">
+                    arrow_drop_down
+                </span>
+                <ul class="menu">
+                    <li><a href="">Blog 1</a></li>
+                    <li><a href="">Blog 2</a></li>
+                </ul>
+            </li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function dropdown() {
+            let list = document.querySelector(".menu");
+            list.classList.toggle("Showmenu")
+        }
+    </script>
+</body>
+
+</html>
