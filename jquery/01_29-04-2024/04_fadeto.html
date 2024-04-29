@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 500px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg"
+        alt="">
+
+    <script>
+        $(function () {
+            $("img").mouseover(function () {
+                $("img").fadeTo(2000, 1)
+            })
+            $("img").mouseout(function () {
+                $("img").fadeTo(2000, 0.5)
+            })
+        })
+    </script>
+</body>
+
+</html>

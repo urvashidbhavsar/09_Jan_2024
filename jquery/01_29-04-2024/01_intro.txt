@@ -1,0 +1,19 @@
+jquery is js library.
+
+version : 3.7.1
+
+website : https://jquery.com/
+
+all ready functions / methods are given to perform task.
+
+syntax : 
+
+$(document).ready(function(){
+    $("selector").events(function(){
+        $("selector").jquery_methods();
+    });
+});
+
+use : 
+offline file download
+online cdn 
