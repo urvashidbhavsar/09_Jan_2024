@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <!-- add functions are : append(), prepand(), before(), after() -->
+    <button id="btn1">append</button>
+    <button id="btn2">prepend</button>
+    <button id="btn3">before</button>
+    <button id="btn4">after</button>
+
+    <ul class="list">
+        <li>List 1</li>
+    </ul>
+
+    <script>
+        $(document).ready(function () {
+            // add element / value in structure
+            $("#btn1").click(function () {
+                $(".list").append("<li>my new list</li>")
+            })
+            $("#btn2").click(function () {
+                $(".list").prepend("<li>my new list</li>")
+            })
+            // add element / value out of structure.
+            $("#btn3").click(function () {
+                $(".list").before("<li>my new list</li>")
+            })
+            $("#btn4").click(function () {
+                $(".list").after("<li>my new list</li>")
+            })
+        })
+    </script>
+</body>
+
+</html>

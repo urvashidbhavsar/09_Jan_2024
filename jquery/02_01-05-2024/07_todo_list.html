@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 20px;
+        }
+
+        input {
+            height: 30px;
+            width: 200px;
+            border: 1px solid gray;
+        }
+
+        button {
+            background-color: cadetblue;
+            color: white;
+            border: 1px solid transparent;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .icon {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <form action="#">
+        <input type="text" name="" id="userinp">
+        <button id="btn">Add</button>
+    </form>
+    <ul id="list"></ul>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                var input = $("#userinp").val()
+                if (input == "") {
+                    alert("Enter value")
+                }
+                else {
+                    $("#list").append(`<li>${input} 
+                        <span class='icon'>&Cross;</span> 
+                        </li>`)
+                    $("#userinp").val('')
+                }
+
+                $(".icon").on("click", function () {
+                    // console.log(123);
+                    $(this).parent().remove()
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

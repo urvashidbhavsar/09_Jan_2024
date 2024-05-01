@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            height: 100px;
+            width: 100px;
+            background-color: crimson;
+            border: 2px solid transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <button id="btn">start animate</button>
+
+    <hr>
+    <div class="mydiv"></div>
+
+    <script>
+        document.body.style.transform = ""
+        $(document).ready(function () {
+            // $("#btn").click(function () {
+            $(".mydiv").animate({
+                height: "150px",
+                width: "150px",
+                marginLeft: "200px",
+                // border: "2px solid black"
+                // transform: "translate(10px,10px)"
+                scale: "1.2",
+            }, 1000, function () {
+                $(".mydiv").animate({
+                    height: "100px",
+                    width: "100px",
+                    marginLeft: "0",
+                    scale: "1",
+                })
+            })
+            // })
+        })
+    </script>
+</body>
+
+</html>
