@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <!-- clone function use to make a copy -->
+    <!-- appendTo(), prependTo(), insertBefore(), insertAfter() -->
+
+    <button id="btn1">appendTo</button>
+    <button id="btn2">prependTo</button>
+    <button id="btn3">insertBefore</button>
+    <button id="btn4">insertAfter</button>
+    <hr>
+
+    <p id="p1">Hello User</p>
+    <div>
+        <span class="text">!!</span>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                // $(".text").clone(true).appendTo("#p1")
+                $(".text").appendTo("#p1") // value shift
+            })
+            $("#btn2").click(function () {
+                $(".text").clone(true).prependTo("#p1")
+            })
+            $("#btn3").click(function () {
+                $(".text").clone(true).insertBefore("#p1")
+            })
+            $("#btn4").click(function () {
+                $(".text").clone(true).insertAfter("#p1")
+            })
+        })
+    </script>
+
+</body>
+
+</html>

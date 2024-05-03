@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bxslider css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" />
+    <style>
+        * {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 570px;
+            object-fit: cover;
+        }
+
+        .bx-wrapper {
+            border: none;
+            box-shadow: none;
+        }
+
+        .bx-wrapper .bx-pager {
+            bottom: 30px;
+            width: 0;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            height: 25px;
+            width: 25px;
+            margin: 5px;
+            background-color: red;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a.active {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- bxslider js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.js"></script>
+
+
+    <div class="homeSlider">
+        <div class="slider">
+            <img src="https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?cs=srgb&dl=pexels-eberhardgross-1421903.jpg&fm=jpg"
+                alt="">
+        </div>
+        <div class="slider">
+            <img src="https://images.unsplash.com/photo-1491466424936-e304919aada7?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D"
+                alt="">
+        </div>
+        <div class="slider">
+            <img src="https://wallpaper-house.com/data/out/12/wallpaper2you_504157.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $(".homeSlider").bxSlider({
+                mode: "fade",
+                auto: "true"
+            })
+        })
+    </script>
+</body>
+
+</html>
