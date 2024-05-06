@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,
+        h1 {
+            border: 1px solid gray;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <button>click here</button>
+    <hr>
+
+    <div class="main">Main
+        <div class="sub-main">sub main
+            <div class="sub"> sub
+                <h1>Hello</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                // string apply when h1 has multiple parent class
+                // $("h1").parent(".sub").css("border-color", "red")
+
+                // string apply when any parent selected
+                // $("h1").parents(".sub-main").css("border-color", "red")
+
+                // string apply when you want structure in between parent-child
+                $("h1").parentsUntil(".main").css("border-color", "red")
+
+            })
+        })    
+    </script>
+</body>
+
+</html>

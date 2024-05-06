@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            font-size: 40px;
+        }
+
+        .change {
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <button>click here</button>
+    <hr>
+
+    <div class="main">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                // $(".box").filter(".box3").addClass("change")
+                // $(".box").first().addClass("change")
+                // $(".box").last().addClass("change")
+                // $(".box").eq(3).addClass("change")
+                $(".box").not(".box3").addClass("change")
+            })
+        })
+    </script>
+</body>
+
+</html>

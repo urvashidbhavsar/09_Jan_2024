@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,
+        h1 {
+            border: 2px solid gray;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <button>click here</button>
+    <hr>
+
+    <div class="main">Main
+        <div class="sub-main">sub main
+            <div class="sub"> sub
+                <h1>Hello</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                // apply string when parent has multiple children
+                // $(".main").children().css("border-color", "blue")
+
+                $(".main").find("h1").css("border-color", "blue")
+            })
+        })    
+    </script>
+</body>
+
+</html>
