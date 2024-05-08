@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ajax means asynchronised js and xml -->
+    <!-- use to call api or load external file -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <button id="btn">load external file</button>
+    <div class="div1"></div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $(".div1").load("data.txt");
+            })
+        })
+    </script>
+</body>
+
+</html>

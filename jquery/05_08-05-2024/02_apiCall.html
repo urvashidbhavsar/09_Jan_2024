@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 5px;
+        }
+
+        img {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <h1>Call API</h1>
+    <hr>
+    <button id="btn1">Load Data</button>
+
+    <table border="1" class="user-table">
+        <tbody class="headings">
+            <tr>
+                <th>Album Id</th>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Url</th>
+                <th>Thumbnail Url</th>
+            </tr>
+        </tbody>
+        <tbody id="data"></tbody>
+    </table>
+
+    <script>
+        $(window).on('load', function () {
+            $("#btn1").click(function () {
+                $.ajax({
+                    url: "https://jsonplaceholder.typicode.com/photos",
+                    type: "GET",
+                    success: function (responsive, status) {
+                        let mydata = "";
+                        for (let i = 0; i < responsive.length; i++) {
+                            const { albumId, id, title, url, thumbnailUrl } = responsive[i];
+                            mydata += `
+                        <tr>
+                            <td>${albumId}</td>
+                            <td>${id}</td>
+                            <td>${title}</td>
+                            <td><img src=${url}></td>
+                            <td><img src=${thumbnailUrl}></td>
+                        </tr>
+                    `
+                        }
+                        $(".user-table").find("#data").append(mydata);
+                    },
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
