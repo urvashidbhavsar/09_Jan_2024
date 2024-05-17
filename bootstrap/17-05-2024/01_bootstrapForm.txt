@@ -1,0 +1,26 @@
+(1) label           => form-label 
+
+(2) input type      => form-control
+text, color, date, 
+password, file, 
+number, search etc
+textarea tag
+
+if want change size => form-control form-control-sm/lg 
+
+(3) select          => form-select 
+
+(4) input - color  => form-control form-control-color
+
+(5) radio, checkbox  => 
+    parent div = form-check (vertical design)
+                form-check-inline (horizontal design)
+
+    input = form-check-input 
+    label = form-check-label 
+
+(6) range => form-range 
+
+(7) to join button/label/dropdown with input 
+    => give parent div => input group 
+    => button/label/dropdown => input-group-text
