@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    background-color: rgb(18, 5, 171);
+}
+
+header .navbar-collapse ul li a {
+    color: white !important;
+}
+
+header .navbar-collapse .dropdown .dropdown-item {
+    color: black !important;
+}
+
+header .navbar-toggler {
+    border       : 2px solid white;
+    border-radius: 0;
+}
+
+header .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+header .navbar-toggler i {
+    font-size: 35px;
+    color    : white;
+}
+
+/* =================================================== */
+.homepage .slider {
+    padding : 140px 0;
+    position: relative;
+    z-index : 1;
+}
+
+.homepage .slider::after {
+    content         : "";
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    bottom          : 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index         : -1;
+}
+
+.homepage .slider1 {
+    background     : url(https://asset.gecdesigns.com/img/wallpapers/beautiful-fantasy-wallpaper-ultra-hd-wallpaper-4k-sr10012418-1706506236698-cover.webp) no-repeat center;
+    background-size: cover;
+}
+
+.homepage .slider2 {
+    background     : url(https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?cs=srgb&dl=pexels-eberhardgross-844297.jpg&fm=jpg) no-repeat center;
+    background-size: cover;
+}
+
+.homepage .slider3 {
+    background     : url(https://wallpapers.com/images/featured/best-ever-desktop-bgt6dccypy1dfk0c.jpg) no-repeat center;
+    background-size: cover;
+}
+
+/* ======================= */
+@media (max-width:576px) {
+    .homepage .slider {
+        padding: 60px 0;
+    }
+
+    .homepage .mypara {
+        width: 100% !important;
+    }
+}
