@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --bs-emphasis-color: #96400b !important;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+ul {
+    padding        : 0;
+    list-style-type: none;
+}
+
+.btnBlue {
+    border: 1px solid #1205ab;
+    color : #1205ab;
+}
+
+.btnBlue:hover {
+    background-color: #1205ab;
+    color           : white;
+}
+
+
+header {
+    background-color: #1205ab;
+}
+
+header .navbar-collapse ul li a {
+    color: white !important;
+}
+
+header .navbar-collapse .dropdown .dropdown-item {
+    color: black !important;
+}
+
+header .navbar-toggler {
+    border       : 2px solid white;
+    border-radius: 0;
+}
+
+header .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+header .navbar-toggler i {
+    font-size: 35px;
+    color    : white;
+}
+
+/* =================================================== */
+.homepage .slider {
+    padding : 140px 0;
+    position: relative;
+    z-index : 1;
+}
+
+.homepage .slider::after {
+    content         : "";
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    bottom          : 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index         : -1;
+}
+
+.homepage .slider1 {
+    background     : url(https://asset.gecdesigns.com/img/wallpapers/beautiful-fantasy-wallpaper-ultra-hd-wallpaper-4k-sr10012418-1706506236698-cover.webp) no-repeat center;
+    background-size: cover;
+}
+
+.homepage .slider2 {
+    background     : url(https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?cs=srgb&dl=pexels-eberhardgross-844297.jpg&fm=jpg) no-repeat center;
+    background-size: cover;
+}
+
+.homepage .slider3 {
+    background     : url(https://wallpapers.com/images/featured/best-ever-desktop-bgt6dccypy1dfk0c.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.bgBlack {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#LoginModel input[type="text"],
+[type="password"] {
+    border-radius   : 0;
+    border          : none;
+    border-bottom   : 1px solid black !important;
+    background-color: transparent;
+    color           : black !important;
+    font-size       : 18px;
+}
+
+#LoginModel input[type="text"]:focus,
+[type="password"]:focus {
+    box-shadow      : none;
+    background-color: transparent;
+}
+
+#LoginModel input[type="text"]::placeholder,
+[type="password"]::placeholder {
+    color: black !important;
+}
+
+.faq img {
+    height    : 50px;
+    width     : 50px;
+    object-fit: cover;
+}
+
+.photogalry ul button {
+    color      : #1205ab;
+    font-weight: bold;
+}
+
+.photogalry .myimg {
+    height    : 200px;
+    width     : 100%;
+    object-fit: cover;
+}
+
+.mytooltip {
+    background-color: var(--bs-emphasis-color);
+    border-radius   : 5px;
+}
+
+/* ======================= */
+@media (max-width:576px) {
+    .homepage .slider {
+        padding: 60px 0;
+    }
+
+    .homepage .mypara {
+        width: 100% !important;
+    }
+}
