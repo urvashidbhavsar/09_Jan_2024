@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            border: 2px solid black;
+            width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 20px;
+            padding: 10px 0;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            height: 20px;
+            width: 90%;
+        }
+
+        input[type="text"]:focus-visible {
+            outline: none;
+        }
+
+        span {
+            color: red;
+        }
+
+        .error {
+            border: 1px solid red;
+        }
+
+        @media print {
+            .error {
+                border: none;
+                border-bottom: 1px solid gray;
+            }
+
+            span {
+                display: none
+            }
+
+            button {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <div class="row">
+            <div>Firstname : </div>
+            <div>
+                <input type="text" name="" id="fname" onkeyup="return checkUsername(this,'msg1')"
+                    onblur="return checkName(this, 'msg1')">
+            </div>
+            <div>
+                <span id="msg1"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div>Middlename : </div>
+            <div>
+                <input type="text" name="" id="" onkeyup="return checkUsername(this,'msg2')"
+                    onblur="return checkName(this, 'msg2')">
+            </div>
+            <div>
+                <span id="msg2"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div>Lastname : </div>
+            <div>
+                <input type="text" name="" id="" onkeyup="return checkUsername(this,'msg3')"
+                    onblur="return checkName(this, 'msg3')">
+            </div>
+            <div>
+                <span id="msg3"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div></div>
+            <div>
+                <button onclick="myprint()">Print Page</button>
+            </div>
+            <div>
+                <button onclick="savepdf()">PDF</button>
+            </div>
+        </div>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
+    <script>
+        // pattern check
+        function checkUsername(inputex, msg) {
+            let ptn = /^[a-zA-Z]*$/
+            if (!(ptn.test(inputex.value))) {
+                document.getElementById(msg).innerHTML = "Invalid name !!"
+                inputex.classList.add("error")
+            } else {
+                document.getElementById(msg).innerHTML = ""
+                inputex.classList.remove("error")
+            }
+            return false
+        }
+        // check blank value
+        function checkName(blank, msg) {
+            if (blank.value == "") {
+                document.getElementById(msg).innerHTML = "Enter your name"
+                blank.classList.add("error")
+            }
+            return false
+        }
+        function myprint() {
+            print()
+        }
+        function savepdf() {
+            let element = document.querySelector("form")
+            html2pdf(element);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <div class="container">
+        <h1>Call API</h1>
+        <hr>
+        <button class="btn btn-primary" id="btn1">Load Data</button>
+
+        <table border="1" class="table mt-4 table-hover user-table">
+            <tbody class="headings">
+                <tr>
+                    <th colspan="2">Address</th>
+                    <th>City</th>
+                    <th>Street</th>
+                    <th>Number</th>
+                </tr>
+            </tbody>
+            <tbody id="data"></tbody>
+        </table>
+    </div>
+
+    <script>
+        $(window).on('load', function () {
+            $("#btn1").click(function () {
+                console.log("hello");
+                $.ajax({
+                    url: "https://fakestoreapi.com/users",
+                    type: "GET",
+                    success: function (responsive, status) {
+                        let mydata = "";
+                        for (let i = 0; i < responsive.length; i++) {
+                            const data = responsive[i];
+                            mydata += `
+                                <tr>
+                                    <td>${data.address.geolocation.lat}</td>
+                                    <td>${data.address.geolocation.long}</td>
+                                    <td>${data.address.city}</td>
+                                    <td>${data.address.street}</td>
+                                    <td>${data.address.number}</td>
+                                </tr>`
+                        }
+                        $(".user-table").find("#data").append(mydata);
+                    },
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
